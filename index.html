@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Beautiful Quiz Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            background-image: url("background_195667.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Roboto', sans-serif;
+            /* Example: Google Font - Roboto */
+            margin: 0;
+            padding: 0;
+            color: #333;
+            /* Dark text color */
+        }
+
+        .quiz-container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            transition: transform 0.4s;
+            transform: scale(1);
+            margin-top: 75px;
+            display: flex;
+        }
+
+        .question-container {
+            text-align: center;
+        }
+
+        .question {
+            font-size: 24px;
+            color: #007bff;
+            display: flex;
+            align-items: center;
+            /* Primary color */
+        }
+
+        .answers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .answer-option {
+            background-color: #4CAF50;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+        }
+
+        .answer-option:hover {
+            background-color: #45a049;
+            box-shadow: 0 0 10px #45a049;
+            transform: scale(1.05);
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #previous-question,
+        #next-question,
+        #finish-question {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #previous-question:hover,
+        #next-question:hover,
+        #finish-question:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  
+</head>
+
+<body>
+    <div class="quiz-container">
+        <div class="logo"><a href='index.html'><img src="neww__lloogo-removebg.png" height="100px" width="120px"></a></div>
+        <div class="mmain">
+            <div class="question-container">
+                <h1 class="question">Question 1</h1>
+                <div class="answers">
+                    <button class="answer-option">Option 1</button>
+                    <button class="answer-option">Option 2</button>
+                    <button class="answer-option">Option 3</button>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="previous-question" onclick="previousQuestion()">Previous</button>
+                <button id="next-question" onclick="nextQuestion();">Next</button>
+                <button id="finish-question" onclick="showResults(); hideButttons();">FINISH</button>
+            </div>
+            <div id="score"></div><br>
+            <b>
+                <div id="learner"></div>
+            </b><br>
+            <div id="homepage"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
